@@ -7,25 +7,19 @@ body {
 }
 
 p::before {
-    content: ' ';
+    content: 'hello';
+    /* display: block; */
     background: red;
-    display: block;
-    width: 10px;
-    height: 10px;
-}
-/* Never put sudo elements on images */
-img::before {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 100px;
-    background: purple;
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
 }
 
 p::after {
-    content: ' ';
+    content: 'goodbye';
+    /* display: block; */
     background: red;
-    display: block;
-    width: 10px;
-    height: 10px;
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
 }
