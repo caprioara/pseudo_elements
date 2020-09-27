@@ -8,7 +8,7 @@ body {
 
 p::before {
     content: 'hello';
-    /* display: block; */
+    display: block;
     background: red;
     font-size: 30px;
     color: white;
@@ -17,7 +17,7 @@ p::before {
 
 p::after {
     content: 'goodbye';
-    /* display: block; */
+    display: block;
     background: red;
     font-size: 30px;
     color: white;
