@@ -1,0 +1,31 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+p::before {
+    content: ' ';
+    background: red;
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+/* Never put sudo elements on images */
+img::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: purple;
+}
+
+p::after {
+    content: ' ';
+    background: red;
+    display: block;
+    width: 10px;
+    height: 10px;
+}
