@@ -48,9 +48,64 @@ blockquote {
     color: $clr-black;
 }
 
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+a[data-tool-tip] {
+    position: relative;
+}
+
+a[data-tool-tip]::after {
+    content: attr(data-tool-tip);
+    display: block;
+    position: absolute;
+    background-color: $clr-gray;
+    padding: 1em 3em;
+    color: white;
+    border-radius: 5px;
+    font-size: .8em;
+    bottom: 0;
+    left: 0;
+    //https://www.w3schools.com/cssref/tryit.asp?filename=trycss_text_white-space
+    white-space: nowrap;
+    transform: scale(0);
+    transition:
+        transform ease-out 150ms,
+        bottom ease-out 150ms;
+}
+
+a[data-tool-tip]:hover::after {
+    transform: scale(1);
+    bottom: 100%;
+}
 
 .decorations {
     padding: 7em;
+}
+
+.section-with-deco::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f0e7';
+    display: block;
+    margin-bottom: 5px;
+}
+
+a[href$=".pdf"]::after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f106';
+}
+
+a[href^="http"]::after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f35d';
+    font-weight: 900;
+    font-size: .8em;
 }
 
 .counters {
@@ -66,6 +121,35 @@ blockquote {
     position: relative;
 }
 
+.section::before {
+    counter-increment: counter-name;
+    content: counter(counter-name);
+    position: absolute;
+    left: -2.5em;
+    top: -.5em;
+    background: white;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid $clr-gray;
+    box-sizing: border-box; //Include padding and border in the element's total width and heigt
+    color: $clr-gray;
+}
+
+.counters {
+    counter-reset: ordered-list;  
+}
+
 .counters ol {
-    list-style: none;
+    list-style: none; //sterge numerele de dinaitne sau puncte
+}
+
+.counters li::before{
+    counter-increment: ordered-list;
+    content: 'list item ' counter(ordered-list) ') ';
+    font-size: .9em;
+    color: $clr-red;
 }
