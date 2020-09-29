@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+
+$ff-ss: 'Unica One';
+$ff-s: 'Vollkorn';
+
+$clr-red: #c31;
+$clr-black: rgba(black, 1);
+$clr-gray: rgba(black, .7);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+body {
+    font-size: 1rem;
+    text-align: center;
+    font-family: $ff-s;
+    line-height: 1.4;
+    color: $clr-gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $ff-ss;
+    text-transform: uppercase;
+    line-height: .9;
+    color: #c31;
+}
+
+.intro {
+    position: relative;
+    display: inline-block;
+
+}
+
+h2 {
+    margin-top: 1.2em;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: .25em;
+}
+
+a {
+    color: $clr-red;
+}
+
+.intro {
+    font-size: 4rem;
+}
+
+blockquote {
+    font-size: 2rem;
+    color: $clr-black;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card {
+    position: relative;
+    margin: 1em;
+    background: $clr-gray;
+}
+
+
+.card__img {
+    max-width: 100%;
+    display: block;
+    transition: opacity ease-out 250ms;
+
+}
+
+.card:hover {
+    .card__img {
+        opacity: .4;
+    }
+}
+
+.card__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    transition: opacity ease-out 250ms;
+}
+
+.card:hover .card__text {
+    opacity: 1;
+}
+
+.card__title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+
+.source {
+    opacity: .8;
+    position: absolute;
+    width: 100%;
+    bottom: 1em;
+}

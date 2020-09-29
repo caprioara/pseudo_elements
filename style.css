@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Unica+One|Vollkorn");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Vollkorn";
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Unica One";
+  text-transform: uppercase;
+  line-height: .9;
+  color: #c31;
+}
+
+.intro {
+  position: relative;
+  display: inline-block;
+}
+
+h2 {
+  margin-top: 1.2em;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: .25em;
+}
+
+a {
+  color: #c31;
+}
+
+.intro {
+  font-size: 4rem;
+}
+
+blockquote {
+  font-size: 2rem;
+  color: black;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  position: relative;
+  margin: 1em;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.card__img {
+  max-width: 100%;
+  display: block;
+  -webkit-transition: opacity ease-out 250ms;
+  transition: opacity ease-out 250ms;
+}
+
+.card:hover .card__img {
+  opacity: .4;
+}
+
+.card__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  -webkit-transition: opacity ease-out 250ms;
+  transition: opacity ease-out 250ms;
+}
+
+.card:hover .card__text {
+  opacity: 1;
+}
+
+.card__title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0;
+}
+
+.source {
+  opacity: .8;
+  position: absolute;
+  width: 100%;
+  bottom: 1em;
+}
+/*# sourceMappingURL=style.css.map */
